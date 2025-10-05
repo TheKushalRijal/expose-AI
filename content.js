@@ -42,7 +42,7 @@ function debounce(func, wait) {
 }
 
 window.addEventListener(
-  "scroll",
+  "DOMContentLoaded",
   debounce(() => {
     setElementBackground("p");
   }, 1000)
