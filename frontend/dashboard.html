@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expose AI - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard-card">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-content">
+          <div class="logo">
+            <span class="icon">🛡️</span>
+            <h1>Expose AI</h1>
+          </div>
+          <div class="user-section">
+            <img id="userAvatar" src="" alt="User" class="avatar">
+            <div class="user-info">
+              <div id="userName" class="user-name">Loading...</div>
+              <div id="userEmail" class="user-email"></div>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-container">
+        <h2 class="section-title">Detection Statistics</h2>
+        
+        <div class="stats-grid">
+          <div class="stat-card ai">
+            <div class="stat-icon">🤖</div>
+            <div class="stat-value" id="aiCount">0</div>
+            <div class="stat-label">AI-Generated Posts</div>
+          </div>
+
+          <div class="stat-card human">
+            <div class="stat-icon">👤</div>
+            <div class="stat-value" id="humanCount">0</div>
+            <div class="stat-label">Human-Written Posts</div>
+          </div>
+
+          <div class="stat-card total">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value" id="totalCount">0</div>
+            <div class="stat-label">Total Analyzed</div>
+          </div>
+
+          <div class="stat-card accuracy">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-value" id="aiPercentage">0%</div>
+            <div class="stat-label">AI Content Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Section -->
+      <div class="activity-section">
+        <h2 class="section-title">Recent Activity</h2>
+        <div class="activity-list" id="activityList">
+          <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <p>No activity yet. Start browsing Reddit to see results!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="resetStatsBtn" class="btn btn-secondary">Reset Statistics</button>
+        <button id="goToRedditBtn" class="btn btn-primary">Browse Reddit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

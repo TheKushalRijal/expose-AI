@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Expose AI</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-card">
+      <!-- Header -->
+      <div class="header">
+        <div class="icon" id="stepIcon">🛡️</div>
+        <h1 id="stepTitle">Welcome to Expose AI</h1>
+        <p id="stepDescription">Your AI-powered text detection companion for Reddit</p>
+      </div>
+
+      <!-- Progress Indicators -->
+      <div class="progress-container">
+        <div class="progress-dot active" data-step="0"></div>
+        <div class="progress-dot" data-step="1"></div>
+        <div class="progress-dot" data-step="2"></div>
+        <div class="progress-dot" data-step="3"></div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content" id="stepContent">
+        <!-- Content will be injected by JavaScript -->
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation">
+        <button id="prevBtn" class="btn btn-secondary" disabled>← Previous</button>
+        <button id="nextBtn" class="btn btn-primary">Next →</button>
+      </div>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+<script src="welcome.js"></script>
+  <script src="welcome.js"></script>
+</body>
+</html>
