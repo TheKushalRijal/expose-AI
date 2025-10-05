@@ -2,131 +2,131 @@ let currentStep = 0;
 
 const steps = [
   {
-    icon: "🛡️",
-    title: "Welcome to Expose AI",
-    description: "Your AI-powered text detection companion for Reddit",
+    title: "Expose AI",
+    subtitle: "Detect AI-generated content on Reddit",
     content: `
-      <p style="font-size: 18px; margin-bottom: 20px;">
-        Expose AI helps you identify AI-generated content on Reddit in real-time.
+      <h1 class="content-title">Welcome to Expose AI</h1>
+      <p class="content-subtitle">Your intelligent companion for identifying AI-generated text</p>
+      <p class="content-description">
+        Expose AI uses advanced machine learning to analyze Reddit posts and comments, 
+        helping you distinguish between human and AI-generated content in real-time.
       </p>
       <div class="feature-grid">
-        <div class="feature-box">
-          <div class="emoji">🔍</div>
-          <div class="text">Detect AI</div>
+        <div class="feature-item">
+          <span class="feature-icon">🔍</span>
+          <h3 class="feature-title">Smart Detection</h3>
+          <p class="feature-desc">Advanced AI analysis</p>
         </div>
-        <div class="feature-box">
-          <div class="emoji">⚡</div>
-          <div class="text">Fast Analysis</div>
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <h3 class="feature-title">Real-time</h3>
+          <p class="feature-desc">Instant results as you browse</p>
         </div>
-        <div class="feature-box">
-          <div class="emoji">🎯</div>
-          <div class="text">Accurate</div>
-        </div>
-      </div>
-    `
-  },
-  {
-    icon: "⚡",
-    title: "Real-Time Detection",
-    description: "We analyze text as you browse and highlight AI-generated content",
-    content: `
-      <p style="font-size: 18px; margin-bottom: 30px;">
-        As you scroll through Reddit, our extension automatically analyzes text content.
-      </p>
-      <div style="background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 10px; border: 1px solid rgba(168, 85, 247, 0.3);">
-        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-          <div style="width: 15px; height: 15px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite;"></div>
-          <span>Scanning in progress...</span>
-        </div>
-        <div style="font-size: 14px; color: rgba(255, 255, 255, 0.6);">
-          Powered by Google Gemini AI
+        <div class="feature-item">
+          <span class="feature-icon">🎯</span>
+          <h3 class="feature-title">Accurate</h3>
+          <p class="feature-desc">Confidence-based scoring</p>
         </div>
       </div>
     `
   },
   {
-    icon: "🎨",
-    title: "Color Coding",
-    description: "Red backgrounds indicate AI-generated text, Green means human-written",
+    title: "How it works",
+    subtitle: "Seamless integration",
     content: `
-      <p style="font-size: 18px; margin-bottom: 30px;">
-        Text highlighting makes it easy to spot AI-generated content at a glance.
-      </p>
-      <div class="color-demo">
-        <div class="color-box ai">
-          <div class="label">🤖 AI-Generated</div>
-          <div class="desc">Red background indicates likely AI content</div>
-        </div>
-        <div class="color-box human">
-          <div class="label">👤 Human-Written</div>
-          <div class="desc">Green background indicates human content</div>
-        </div>
-      </div>
-    `
-  },
-  {
-    icon: "🚀",
-    title: "Ready to Start!",
-    description: "Start browsing Reddit and we'll do the rest",
-    content: `
-      <p style="font-size: 20px; margin-bottom: 20px;">
-        You're all set! 🎉
-      </p>
-      <p style="font-size: 16px; color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">
-        Navigate to Reddit and the extension will automatically start detecting AI-generated text.
+      <h1 class="content-title">Automatic Detection</h1>
+      <p class="content-subtitle">Works silently in the background</p>
+      <p class="content-description">
+        As you scroll through Reddit, Expose AI automatically analyzes text content. 
+        No manual actions required—just browse naturally and we'll highlight suspicious content.
       </p>
       <div class="tip-box">
-        <p style="font-size: 14px;">
-          💡 Tip: The extension works best when you scroll slowly through content
-        </p>
+        <p>💡 Powered by Google Gemini AI for accurate, real-time analysis</p>
+      </div>
+    `
+  },
+  {
+    title: "Understanding the colors",
+    subtitle: "Visual indicators",
+    content: `
+      <h1 class="content-title">Color-Coded Results</h1>
+      <p class="content-subtitle">Instant visual feedback</p>
+      <p class="content-description">
+        Text is highlighted based on AI confidence levels. 
+        Each color represents a different likelihood of AI generation.
+      </p>
+      <div class="legend-container">
+        <div class="legend-item">
+          <div class="legend-color ai"></div>
+          <div class="legend-text">
+            <h3>AI-Generated (71-100%)</h3>
+            <p>Light red underlined text indicates high confidence of AI content</p>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color unsure"></div>
+          <div class="legend-text">
+            <h3>Unsure (41-70%)</h3>
+            <p>Yellow underlined text indicates uncertain classification</p>
+          </div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color human"></div>
+          <div class="legend-text">
+            <h3>Human-Written (0-40%)</h3>
+            <p>No highlighting—appears as normal text</p>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    title: "Get Started",
+    subtitle: "Optional login",
+    content: `
+      <h1 class="content-title">You're All Set</h1>
+      <p class="content-subtitle">Start detecting AI content now</p>
+      
+      <div class="login-section">
+        <h2 class="login-title">Track Your Statistics</h2>
+        <p class="login-desc">Login to save your detection history and access advanced features</p>
+        
+        <div class="login-benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">💾</span>
+            <span class="benefit-text">Persistent statistics that don't reset</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">📊</span>
+            <span class="benefit-text">Detailed analytics dashboard</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">📈</span>
+            <span class="benefit-text">Track detection history over time</span>
+          </div>
+        </div>
+        
+        <div class="login-actions">
+          <button id="loginBtn" class="login-btn primary">Login with Auth0</button>
+          <button id="skipLoginBtn" class="login-btn secondary">Continue Without Login</button>
+        </div>
+      </div>
+      
+      <div class="tip-box" style="margin-top: 40px;">
+        <p>💡 Without login, your statistics will reset when you close your browser</p>
       </div>
     `
   }
 ];
 
-// Add login button to first step
-const originalStep0Content = steps[0].content;
-steps[0].content = originalStep0Content + `
-  <div style="margin-top: 30px;">
-    <button id="loginBtn" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 16px;">
-      🔐 Login with Auth0
-    </button>
-    <p style="margin-top: 15px; font-size: 14px; color: rgba(255,255,255,0.7);">
-      Login to track your AI detection statistics
-    </p>
-  </div>
-`;
-
-// Listen for login button clicks
-document.addEventListener('click', async (e) => {
-  if (e.target.id === 'loginBtn') {
-    e.target.textContent = 'Logging in...';
-    e.target.disabled = true;
-    try {
-      await window.auth0Client.login();
-    } catch (error) {
-      console.error('Login failed:', error);
-      e.target.textContent = '🔐 Login with Auth0';
-      e.target.disabled = false;
-      alert('Login failed. Please try again.');
-    }
-  }
-});
-
-
 function updateStep() {
   const step = steps[currentStep];
   
-  // Update header
-  document.getElementById('stepIcon').textContent = step.icon;
-  document.getElementById('stepTitle').textContent = step.title;
-  document.getElementById('stepDescription').textContent = step.description;
-  
   // Update content
-  document.getElementById('stepContent').innerHTML = step.content;
+  document.getElementById('contentArea').innerHTML = step.content;
   
-  // Update progress dots
-  document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+  // Update step indicators
+  document.querySelectorAll('.step').forEach((dot, index) => {
     dot.classList.remove('active', 'completed');
     if (index === currentStep) {
       dot.classList.add('active');
@@ -142,12 +142,45 @@ function updateStep() {
   prevBtn.disabled = currentStep === 0;
   
   if (currentStep === steps.length - 1) {
-    nextBtn.textContent = 'Get Started! 🚀';
-    nextBtn.className = 'btn btn-success';
+    nextBtn.style.display = 'none'; // Hide on last step
   } else {
-    nextBtn.textContent = 'Next →';
-    nextBtn.className = 'btn btn-primary';
+    nextBtn.style.display = 'block';
+    nextBtn.textContent = 'Continue';
   }
+  
+  // Add event listeners for login buttons on last step
+  if (currentStep === steps.length - 1) {
+    const loginBtn = document.getElementById('loginBtn');
+    const skipBtn = document.getElementById('skipLoginBtn');
+    
+    if (loginBtn) {
+      loginBtn.addEventListener('click', async () => {
+        loginBtn.textContent = 'Logging in...';
+        loginBtn.disabled = true;
+        try {
+          await window.auth0Client.login();
+        } catch (error) {
+          console.error('Login failed:', error);
+          loginBtn.textContent = 'Login with Auth0';
+          loginBtn.disabled = false;
+          alert('Login failed. Please try again.');
+        }
+      });
+    }
+    
+    if (skipBtn) {
+      skipBtn.addEventListener('click', () => {
+        finishSetup(false);
+      });
+    }
+  }
+}
+
+function finishSetup(loggedIn) {
+  chrome.storage.local.set({ hasSeenWelcome: true }, () => {
+    chrome.tabs.create({ url: 'https://www.reddit.com' });
+    window.close();
+  });
 }
 
 document.getElementById('prevBtn').addEventListener('click', () => {
@@ -161,11 +194,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
   if (currentStep < steps.length - 1) {
     currentStep++;
     updateStep();
-  } else {
-    // Finish - save and close
-    chrome.storage.local.set({ hasSeenWelcome: true }, () => {
-      window.close();
-    });
   }
 });
 

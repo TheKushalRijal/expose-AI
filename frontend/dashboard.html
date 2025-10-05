@@ -14,7 +14,7 @@
         <div class="header-content">
           <div class="logo">
             <span class="icon">🛡️</span>
-            <h1>Expose AI</h1>
+            <h1>Expose AI Dashboard</h1>
           </div>
           <div class="user-section">
             <img id="userAvatar" src="" alt="User" class="avatar">
@@ -32,28 +32,28 @@
         <h2 class="section-title">Detection Statistics</h2>
         
         <div class="stats-grid">
-          <div class="stat-card ai">
-            <div class="stat-icon">🤖</div>
+          <div class="stat-card">
+            <span class="stat-icon">🤖</span>
             <div class="stat-value" id="aiCount">0</div>
-            <div class="stat-label">AI-Generated Posts</div>
+            <div class="stat-label">AI-Generated (71-100%)</div>
           </div>
 
-          <div class="stat-card human">
-            <div class="stat-icon">👤</div>
+          <div class="stat-card">
+            <span class="stat-icon">❓</span>
+            <div class="stat-value" id="unsureCount">0</div>
+            <div class="stat-label">Uncertain (41-70%)</div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">👤</span>
             <div class="stat-value" id="humanCount">0</div>
-            <div class="stat-label">Human-Written Posts</div>
+            <div class="stat-label">Human-Written (0-40%)</div>
           </div>
 
-          <div class="stat-card total">
-            <div class="stat-icon">📊</div>
+          <div class="stat-card">
+            <span class="stat-icon">📊</span>
             <div class="stat-value" id="totalCount">0</div>
             <div class="stat-label">Total Analyzed</div>
-          </div>
-
-          <div class="stat-card accuracy">
-            <div class="stat-icon">🎯</div>
-            <div class="stat-value" id="aiPercentage">0%</div>
-            <div class="stat-label">AI Content Rate</div>
           </div>
         </div>
       </div>
@@ -69,9 +69,8 @@
         </div>
       </div>
 
-      <!-- Actions -->
+      <!-- Actions (NO RESET BUTTON) -->
       <div class="actions">
-        <button id="resetStatsBtn" class="btn btn-secondary">Reset Statistics</button>
         <button id="goToRedditBtn" class="btn btn-primary">Browse Reddit</button>
       </div>
     </div>
