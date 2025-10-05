@@ -15,13 +15,9 @@
   "content_scripts": [
     {
       "matches": ["*://www.reddit.com/*", "*://old.reddit.com/*"],
-      "js": ["contentScript.js"],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
-  ],
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
+  ]
+  
 }
