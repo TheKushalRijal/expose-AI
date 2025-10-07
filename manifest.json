@@ -1,22 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "AI Text Detector",
+  "name": "Reddit AI Text Detector 2(DOM)",
   "version": "1.0",
-  "description": "Highlights AI-generated text on Reddit.",
-  "permissions": [
-    "scripting",
-    "activeTab"
-  ],
-  "host_permissions": [
-    "https://generativelanguage.googleapis.com/*"
-  ],
+  "description": "Annotates Reddit posts and comments with a heuristic score indicating likelihood of AI-generated text.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["*://www.reddit.com/*", "*://old.reddit.com/*"],
   "background": {
     "service_worker": "background.js"
   },
+  "action": {
+    "default_title": "Reddit AI Text Detector"
+  },
   "content_scripts": [
     {
-      "matches": ["*://*.reddit.com/*"],
-      "js": ["content.js"]
+      "matches": ["*://www.reddit.com/*", "*://old.reddit.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ]
+ 
 }
